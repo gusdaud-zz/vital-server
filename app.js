@@ -486,11 +486,26 @@ function inicializarPush() {
     var opcoes = { cert: "apn/cert-production.pem", 
         key: "apn/key-production.pem", production: true };
     apnProducao = new apn.Connection(opcoes); 
+    var feedbackProducao = new apn.Feedback(opcoes);
+    feedbackProducao.on("feedback", function(devices) {
+        devices.forEach(function(item) {
+            console.log("Log do APN de producao:");
+            console.log(item);
+        });
+    });
+    
     //Inicializa o objeto para o envio de push de modo de desenvolvimento
     opcoes.cert = "apn/cert-development.pem";
     opcoes.key = "apn/key-development.pem";
     opcoes.production = false;
     apnDesenvolvimento = new apn.Connection(opcoes); 
+    var feedbackDesenvolvimento = new apn.Feedback(opcoes);
+    feedbackDesenvolvimento.on("feedback", function(devices) {
+        devices.forEach(function(item) {
+            console.log("Log do APN de desenvolvimento:");
+            console.log(item);
+        });
+    });
 }
 
 /* Inicializa o twilio */
