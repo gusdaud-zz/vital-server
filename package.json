@@ -1,0 +1,31 @@
+{
+  "name": "Vital",
+  "version": "0.1.0",
+  "description": "Aplicativo Vital",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "apn": "^1.7.5",
+    "body-parser": "^1.14.2",
+    "cloudant": "^1.4.0",
+    "connect-couchdb": "^1.0.0",
+    "cookie-parser": "^1.4.0",
+    "cookie-session": "^1.2.0",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "ibmiotf": "^0.2.1",
+    "nodemailer": "^1.10.0",
+    "nodemailer-smtp-transport": "^1.0.4",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0",
+    "passport.socketio": "^3.6.1",
+    "request": "^2.67.0",
+    "socket.io": "^1.3.7",
+    "twilio": "^2.8.0"
+  },
+  "repository": {},
+  "engines": {
+    "node": "0.12.x"
+  }
+}

@@ -1,0 +1,142 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="vitalAlerta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Alerta</h4>
+            </div>
+
+            <div class="modal-body">
+                <div>
+                    <!-- Abas -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#nome" id="tabNome" aria-controls="nome" role="tab" data-toggle="tab">Nome</a></li>
+                        <li role="presentation"><a href="#quando" id="tabQuando" aria-controls="quando" role="tab" data-toggle="tab">Dias e horário</a></li>
+                        <li role="presentation"><a href="#condição" id="tabCondição" aria-controls="condição" role="tab" data-toggle="tab">Condição</a></li>
+                        <li role="presentation"><a href="#tipo" id="tabTipo" aria-controls="tipo" role="tab" data-toggle="tab">Tipo</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="nome">
+                            <div class="form-group">
+                                <label>Nome de descrição do alerta:</label>
+                                <input type="text" class="form-control" id="alerta-nome" maxlength="50" />
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="quando">
+                            <label style="display:block">Dias:</label>
+                            <div class="checkbox" style="display:inline-block">
+                                <label><input id="alerta-dias-todos" type="checkbox">Todos os dias</label>
+                            </div>&nbsp;
+                            <div class="checkbox" style="display:inline-block">
+                                <label><input id="alerta-dias-segunda" type="checkbox" value="">Seg</label>
+                            </div>&nbsp;
+                            <div class="checkbox" style="display:inline-block">
+                                <label><input id="alerta-dias-terça" type="checkbox" value="">Ter</label>
+                            </div>&nbsp;
+                            <div class="checkbox" style="display:inline-block">
+                                <label><input id="alerta-dias-quarta" type="checkbox" value="">Qua</label>
+                            </div>&nbsp;
+                            <div class="checkbox" style="display:inline-block">
+                                <label><input id="alerta-dias-quinta" type="checkbox" value="">Qui</label>
+                            </div>&nbsp;
+                            <div class="checkbox" style="display:inline-block">
+                                <label><input id="alerta-dias-sexta" type="checkbox" value="">Sex</label>
+                            </div>&nbsp;
+                            <div class="checkbox" style="display:inline-block">
+                                <label><input id="alerta-dias-sábado" type="checkbox" value="">Sáb</label>
+                            </div>&nbsp;
+                            <div class="checkbox" style="display:inline-block">
+                                <label><input id="alerta-dias-domingo" type="checkbox" value="">Dom</label>
+                            </div><br />
+                            <div class="form-group">
+                                <label for="horarios">Horário:</label>
+                                <select class="form-control" id="alerta-horario">
+                                    <option value="qualquer">Qualquer horário</option>
+                                    <option>0:00</option>
+                                    <option>1:00</option>
+                                    <option>2:00</option>
+                                    <option>3:00</option>
+                                    <option>4:00</option>
+                                    <option>5:00</option>
+                                    <option>6:00</option>
+                                    <option>7:00</option>
+                                    <option>8:00</option>
+                                    <option>9:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                    <option>12:00</option>
+                                    <option>13:00</option>
+                                    <option>14:00</option>
+                                    <option>15:00</option>
+                                    <option>16:00</option>
+                                    <option>17:00</option>
+                                    <option>18:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                    <option>21:00</option>
+                                    <option>22:00</option>
+                                    <option>23:00</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="condição">
+                            <div class="form-group">
+                                <label for="horarios">Alertar quando:</label>
+                                <select class="form-control" id="alerta-quando">
+                                    <option value="entrou">Entrou em uma região</option>
+                                    <option value="saiu">Saiu de em uma região</option>
+                                    <!-- <option value="nãoesta">Não está em uma região</option>
+                                    <option value="desconhecida">A localização é desconhecida há mais de 1 dia</option> -->
+                                </select>
+                            </div>
+                            <div class="form-group" id="caixalocal">
+                                <label for="horarios">Região:</label>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="alerta-endereço" placeholder="Digitar endereço ou local">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" id="alerta-gps">
+                                        <span class="glyphicon glyphicon-screenshot"></span></button>
+                                    </span>
+                                </div><!-- /input-group -->
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tipo">
+                            <div class="form-group">
+                                <label for="horarios">Método:</label>
+                                <select class="form-control" id="alerta-método">
+                                    <option value="sms">Enviar SMS</option>
+                                    <option value="email">Enviar e-mail</option>
+                                    <option value="push">Enviar push para mim</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="caixa-destino">
+                                <label>Telefone:</label>
+                                <input type="text" class="form-control" id="alerta-destino"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Mensagem:</label>
+                                <input type="text" class="form-control" id="alerta-mensagem" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="float:left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" style="float:right" id="alerta-salvar">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fecharRaio modal-content">
+    <button class="btn btn-warning" id="Limpar" style="display:none">Limpar</button>
+    <button class="btn" id="Cancelar">Cancelar</button>
+    <button class="btn btn-primary" id="Salvar">Salvar</button>
+</div>

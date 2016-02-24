@@ -1,0 +1,100 @@
+﻿body {
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+/* Área principal */
+.main {
+    white-space:nowrap;
+    overflow:hidden;
+}
+.main.semmargem {
+    width:100%;
+    margin-left:0;
+}
+
+/* Estilo do mapa */
+.mapa {
+    width:100%;
+    height:100%;
+    display:inline-block;
+    vertical-align:top;
+}
+
+/* Barra de dispositivo */
+.barraDispositivo {
+    vertical-align:top;
+    border-right:2px solid black;
+    display:inline-block;
+    width:0px;
+    height:100%;
+    background-color:dimgray;
+    color:white;
+}
+.barraDispositivo > .conteudo {
+    margin:10px;
+}
+.barraDispositivo .titulo {
+    font-size:22px;
+    margin-bottom:10px;
+}
+.barraDispositivo .botao {
+    width:195px;
+}
+.barraDispositivo #alertas {
+    margin-bottom:20px;
+}
+.barraDispositivo .alerta {
+    margin-bottom:10px;
+    border:1px solid white;
+    padding:15px;
+    white-space:normal;
+    width:195px;
+}
+
+/* Dropdown com o nome do usuário */
+.dropdown .usuario {
+    color:white;
+    margin-left:20px;
+    margin-bottom:5px;
+}
+
+/* Tela para monitorar */
+#vitalMonitorarAdicionar > table {
+    margin: 0 auto;
+}
+
+/* Dispositivo */
+.vitaldispositivo {
+    cursor:pointer;
+}
+.retrato {
+    border-radius:50%;
+    display:inline-block;
+    width:40px;
+    height:40px;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+/* Abas */
+.tab-pane {
+    padding-left:20px;
+    padding-top:20px;
+}
+
+/* Para a caixa de editar endereço do google ser exibida em plano de frente */
+.pac-container {
+    z-index: 1051 !important;
+}
+
+/* Quadro para fechar a tela de edição de raio */
+.fecharRaio {
+    display:none;
+    top:50px;
+    right:20px;
+    position:absolute;
+    z-index:9000;
+    padding:20px;
+}
