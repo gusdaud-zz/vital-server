@@ -483,12 +483,12 @@ function inicializarIO() {
 function inicializarPush() {
  
     //Inicializa o objeto para envio de push de produção
-    var opcoes = { cert: "apn/apn.pem", 
-        key: "apn/apn_key.pem", production: true };
+    var opcoes = { cert: "apn/cert-production.pem", 
+        key: "apn/key-production.pem", production: true };
     apnProducao = new apn.Connection(opcoes); 
     //Inicializa o objeto para o envio de push de modo de desenvolvimento
-    opcoes.cert = "apn/apn_development.pem";
-    opcoes.key = "apn/apn_development_key.pem";
+    opcoes.cert = "apn/cert-development.pem";
+    opcoes.key = "apn/key-development.pem";
     opcoes.production = false;
     apnDesenvolvimento = new apn.Connection(opcoes); 
 }
