@@ -484,7 +484,8 @@ function inicializarPush() {
  
     //Inicializa o objeto para envio de push de produção
     var opcoes = { cert: "apn/cert-production.pem", 
-        key: "apn/key-production.pem", production: true };
+        key: "apn/key-production.pem", production: true,
+        "batchFeedback": true, "interval": 300 };
     apnProducao = new apn.Connection(opcoes); 
     var feedbackProducao = new apn.Feedback(opcoes);
     feedbackProducao.on("feedback", function(devices) {
