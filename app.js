@@ -509,6 +509,15 @@ function inicializarPush() {
     });
 }
 
+/* Tenta inicializar o push */
+function tentarInicializarPush() {
+    try {
+        inicializarPush();
+    } catch (error) {
+        console.log('Não foi possível inicializar o push');
+    }
+}
+
 /* Inicializa o twilio */
 function inicializarTwilio() {
     twilioClient = new twilio.RestClient(vitalConfig.twilio.AccountSID, vitalConfig.twilio.AuthToken);
@@ -578,6 +587,6 @@ inicializarIot();
 inicializarServidor();
 inicializarAutenticacao();
 inicializarIO();
-inicializarPush();
+// tentarInicializarPush();
 inicializarTwilio();
 inicializarMailer();
